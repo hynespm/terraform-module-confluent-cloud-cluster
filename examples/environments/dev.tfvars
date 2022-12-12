@@ -1,0 +1,6 @@
+region         = "eu-west-1"
+environment    = "dev"
+cluster_name   = "test-cluster"
+cloud          = "aws"
+availability   = "MULTI_ZONE"
+environment_id = "default"
