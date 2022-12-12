@@ -79,13 +79,14 @@ jobs:
       run: terraform init -backend-config=backend/dev.hcl
       working-directory: examples
 
-#    # Checks that all Terraform configuration files adhere to a canonical format
-#    - name: Terraform Format
-#      run: terraform fmt -check -diff -recursive
-#
-#    # Generates an execution plan for Terraform
-#    - name: Terraform Plan
-#      run: terraform plan var-file=environments/dev.tfvars -refresh=true -out=dev-plan.tfplan
+    # Checks that all Terraform configuration files adhere to a canonical format
+    - name: Terraform Format
+      run: terraform fmt -check -diff -recursive
+
+    # Generates an execution plan for Terraform
+    - name: Terraform Plan
+      run: terraform plan var-file=environments/dev.tfvars -refresh=true -out=dev-plan.tfplan
+
 #
 #      # On push to "master", build or change infrastructure according to Terraform configuration files
 #      # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
