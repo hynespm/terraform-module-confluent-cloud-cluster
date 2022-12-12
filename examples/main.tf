@@ -4,6 +4,7 @@ terraform {
       source  = "confluentinc/confluent"
       version = "1.16.0"
     }
+    backend "local" {}
   }
 }
 
